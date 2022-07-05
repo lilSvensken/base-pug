@@ -1,0 +1,225 @@
+$max: 1600px;
+$full: 1280px;
+$huge: 1024px;
+$big: 968px;
+$middle: 768px;
+$small: 568px;
+$mobile: 480px;
+$xs: 360px;
+$xxs: 320px;
+
+@mixin for-mx-up {
+  @media screen and (min-width: $max) {
+    @content;
+  }
+}
+
+@mixin for-mx-down {
+  @media screen and (max-width: $max - 1) {
+    @content;
+  }
+}
+
+@mixin for-fl-up {
+  @media screen and (min-width: $full) {
+    @content;
+  }
+}
+
+@mixin for-fl-down {
+  @media screen and (max-width: $full - 1) {
+    @content;
+  }
+}
+
+@mixin for-hg-up {
+  @media screen and (min-width: $huge) {
+    @content;
+  }
+}
+
+@mixin for-hg-down {
+  @media screen and (max-width: $huge - 1) {
+    @content;
+  }
+}
+
+@mixin for-bg-up {
+  @media screen and (min-width: $big) {
+    @content;
+  }
+}
+
+@mixin for-bg-down {
+  @media screen and (max-width: $big - 1) {
+    @content;
+  }
+}
+
+@mixin for-md-up {
+  @media screen and (min-width: $middle) {
+    @content;
+  }
+}
+
+@mixin for-md-down {
+  @media screen and (max-width: $middle - 1) {
+    @content;
+  }
+}
+
+@mixin for-sm-up {
+  @media screen and (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin for-sm-down {
+  @media screen and (max-width: $small - 1) {
+    @content;
+  }
+}
+
+@mixin for-mb-up {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin for-mb-down {
+  @media screen and (max-width: $mobile - 1) {
+    @content;
+  }
+}
+
+@mixin for-xs-up {
+  @media screen and (min-width: $xs) {
+    @content;
+  }
+}
+
+@mixin for-xs-down {
+  @media screen and (max-width: $xs - 1) {
+    @content;
+  }
+}
+
+@mixin for-xxs-up {
+  @media screen and (min-width: $xxs) {
+    @content;
+  }
+}
+
+@mixin for-xxs-down {
+  @media screen and (max-width: $xxs - 1) {
+    @content;
+  }
+}
+
+.gl-mx-show {
+  @include for-mx-up {
+    display: none !important;
+  }
+}
+
+.gl-mx-hide {
+  @include for-mx-down {
+    display: none !important;
+  }
+}
+
+.gl-fl-show {
+  @include for-fl-up {
+    display: none !important;
+  }
+}
+
+.gl-fl-hide {
+  @include for-fl-down {
+    display: none !important;
+  }
+}
+
+.gl-hg-show {
+  @include for-hg-up {
+    display: none !important;
+  }
+}
+
+.gl-hg-hide {
+  @include for-hg-down {
+    display: none !important;
+  }
+}
+
+.gl-bg-show {
+  @include for-bg-up {
+    display: none !important;
+  }
+}
+
+.gl-bg-hide {
+  @include for-bg-down {
+    display: none !important;
+  }
+}
+
+.gl-md-show {
+  @include for-md-up {
+    display: none !important;
+  }
+}
+
+.gl-md-hide {
+  @include for-md-down {
+    display: none !important;
+  }
+}
+
+.gl-sm-show {
+  @include for-sm-up {
+    display: none !important;
+  }
+}
+
+.gl-sm-hide {
+  @include for-sm-down {
+    display: none !important;
+  }
+}
+
+.gl-mb-show {
+  @include for-mb-up {
+    display: none !important;
+  }
+}
+
+.gl-mb-hide {
+  @include for-mb-down {
+    display: none !important;
+  }
+}
+
+.gl-xs-show {
+  @include for-xs-up {
+    display: none !important;
+  }
+}
+
+.gl-xs-hide {
+  @include for-xs-down {
+    display: none !important;
+  }
+}
+
+.gl-xxs-show {
+  @include for-xxs-up {
+    display: none !important;
+  }
+}
+
+.gl-xxs-hide {
+  @include for-xxs-down {
+    display: none !important;
+  }
+}

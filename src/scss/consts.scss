@@ -1,0 +1,30 @@
+@import "src/scss/sizes.scss";
+
+:root {
+  --page-content-padding: 32px;
+
+  @include for-md-down {
+    --page-content-padding: 24px;
+  }
+
+  /* colors */
+  --main-color: #06C506;
+  --text-color: #1A1A1A;
+
+  /* transitions */
+  --transition-duration-short: 200ms;
+  --transition-duration-fast: 350ms;
+
+  /* border-radius */
+  --border-radius-small: 8px;
+  --border-radius-middle: 12px;
+  --border-radius-big: 32px;
+
+  /* z-index */
+  --z-index-header: 2;
+  --z-index-modal: 3;
+
+  /* основной шрифт проета */
+  --font-family-inter: 'Inter', sans-serif;
+}
+

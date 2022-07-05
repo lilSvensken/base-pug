@@ -1,0 +1,57 @@
+@import '../../node_modules/swiper/swiper-bundle';
+
+.gl-swiper {
+  &__btn-nav {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-color: #FFF;
+    border-radius: 100%;
+    background-image: url("/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+
+    &--prev {
+      transform: rotate(90deg);
+    }
+
+    &--next {
+      transform: rotate(-90deg);
+    }
+
+    & + & {
+      margin-left: 8px;
+    }
+
+    &.swiper-button-disabled {
+      opacity: .7;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: flex-start;
+
+    &.swiper-pagination {
+      z-index: 1;
+    }
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: #FFF;
+      opacity: 1;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--main-color);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "src/scss/sizes.scss";
+@import "src/scss/extends";
+
+.gl-layout-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex: 1;
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.gl-layout-content {
+  @extend %set-max-height;
+  width: 100%;
+  height: 100%;
+
+  @include for-md-down {
+    overflow-x: hidden;
+  }
+}
+
+.gl-page-content {
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
+  width: 100%;
+  max-width: calc(1424px + var(--page-content-padding) * 2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gl-modal {
+  @extend %modal;
+  z-index: var(--z-index-modal);
+  background-color: rgba(42, 46, 52, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    max-height: 100vh;
+    width: 344px;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: var(--border-radius-big);
+    margin: 30px 10px;
+
+    @include for-md-down {
+      margin: 0;
+    }
+  }
+}
